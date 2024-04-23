@@ -21,6 +21,7 @@ func main() {
 		fmt.Println("Hello world")
 	}))
 
+	fmt.Println("Listening on ", port)
 	err := http.ListenAndServe(fmt.Sprintf(":%s", port), r)
 	if err != nil {
 		log.Fatal("ListenAndServe: ", err)
