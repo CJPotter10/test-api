@@ -16,6 +16,7 @@ func main() {
 
 	r.Handle("/", http.HandlerFunc(func(w http.ResponseWriter, r *http.Request) {
 		fmt.Printf("Connected to server instance so networking is working")
+		w.Write([]byte("Hello world"))
 	}))
 	r.Handle("/helloWorld", http.HandlerFunc(func(w http.ResponseWriter, r *http.Request) {
 		fmt.Println("Hello world")
